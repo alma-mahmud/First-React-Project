@@ -15,7 +15,7 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // মোবাইল মেনু ওপেন থাকলে বডি স্ক্রল বন্ধ রাখা
+  // Mobil er menu Open thakle Body scroll off rakhbe
   useEffect(() => {
     document.body.style.overflow = menuShow ? "hidden" : "unset";
   }, [menuShow]);
@@ -27,8 +27,7 @@ function Navbar() {
       {/* --- Main Navbar --- */}
       <nav
         className={`fixed top-0 left-0 w-full z-100 transition-all duration-300 ease-in-out
-        ${isSticky ? "bg-white py-4 shadow-lg" : "bg-transparent py-6 lg:pt-14"}`}
-      >
+        ${isSticky ? "bg-white py-4 shadow-lg" : "bg-transparent py-6 lg:pt-14"}`}>
         <div className="container mx-auto px-4 lg:px-0 flex justify-between items-center">
           {/* Logo */}
           <div className="w-32 sm:w-40">
@@ -69,7 +68,7 @@ function Navbar() {
         </div>
       </nav>
 
-      {/* --- Mobile Menu Overlay (Nav এর বাইরে) --- */}
+      {/* --- Mobile Menu Overlay (Nav er bahire) --- */}
       <div
         className={`fixed inset-0 bg-black/70 z-110 transition-opacity duration-300 ${
           menuShow ? "opacity-100 visible" : "opacity-0 invisible"
@@ -77,12 +76,11 @@ function Navbar() {
         onClick={() => setMenuShow(false)}
       />
 
-      {/* --- Mobile Sidebar (Nav এর বাইরে) --- */}
+      {/* --- Mobile Sidebar (Nav er bahire) --- */}
       <div
         className={`fixed top-0 right-0 h-full w-70 bg-[#6A4DF4] z-120 p-10 
         transform transition-transform duration-500 ease-in-out flex flex-col
-        ${menuShow ? "translate-x-0" : "translate-x-full"}`}
-      >
+        ${menuShow ? "translate-x-0" : "translate-x-full"}`}>
         <IoMdClose
           onClick={() => setMenuShow(false)}
           className="text-4xl text-white self-end cursor-pointer mb-10"
@@ -93,8 +91,7 @@ function Navbar() {
               key={link}
               href={`#${link.toLowerCase()}`}
               onClick={() => setMenuShow(false)}
-              className="text-white text-2xl font-semibold border-b border-white/10 pb-2 hover:text-yellow-300"
-            >
+              className="text-white text-2xl font-semibold border-b border-white/10 pb-2 hover:text-yellow-300">
               {link}
             </a>
           ))}
