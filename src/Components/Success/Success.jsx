@@ -130,13 +130,11 @@ function Success() {
               sm:flex-row sm:justify-between
               md:gap-10
               lg:w-180.5 lg:justify-center lg:gap-27.5
-            "
-          >
+            ">
             {Rightside.map((item) => (
               <div
                 key={item.id}
-                className="flex flex-col items-center text-center"
-              >
+                className="flex flex-col items-center text-center">
                 <Counter
                   target={item.number}
                   suffix={item.suffix}
@@ -150,8 +148,7 @@ function Success() {
                     md:text-[20px]
                     font-Inter font-medium
                     pt-5
-                  "
-                >
+                  ">
                   {item.title}
                 </p>
               </div>

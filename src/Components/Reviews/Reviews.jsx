@@ -154,7 +154,7 @@ function Reviews() {
                       <h3 className="text-[#232323] text-[20px] font-Inter font-semibold leading-[120%]">
                         {item.head}
                       </h3>
-                      <p className="text-[#7B7B7B] text-[16px] font-Inter font-normal leading-6.5">
+                      <p className="text-[#7B7B7B] text-[16px] font-Inter font-normal leading-7">
                         {item.desc2}
                       </p>
                     </div>
